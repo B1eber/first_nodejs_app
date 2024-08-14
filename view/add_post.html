@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add-new</title>
+    <link rel="stylesheet" href="/style/main.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/add_post">New Post</a></li>
+        <li><a href="/contact">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="form-container">
+      <h2>New Post Form</h2>
+      <form action="/submit_post" method="post">
+        <label for="postTitle">Post Title:</label>
+        <input type="text" id="postTitle" name="postTitle" required />
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required />
+
+        <label for="postContent">Post Content:</label>
+        <textarea
+          id="postContent"
+          name="postContent"
+          rows="4"
+          required
+        ></textarea>
+
+        <button type="submit">Submit Post</button>
+      </form>
+    </div>
+  </body>
+</html>

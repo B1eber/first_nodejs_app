@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./parts/head.ejs')%>
+  <body>
+    <%- include('./parts/nav.ejs') %>
+    <h1>Contacts:</h1>
+    <ul>
+      <% if (contacts.length) { %>                        <!--  Функция выполняет вставку списка "contact" с сервера, для динамичности  -->
+        <% contacts.forEach(({ link, name }) => { %>
+          <li>
+            <a href="<%= link %>"><%= name %></a>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </body>
+</html>

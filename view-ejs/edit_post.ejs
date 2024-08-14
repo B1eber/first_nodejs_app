@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./parts/head.ejs') %>
+  <body>
+    <%- include('./parts/nav.ejs') %>
+
+    <form
+      id="post-form"
+      method="post"
+      action="/edit/<%= post.id %>?_method=PUT"
+    >
+      <div class="form-info">
+        <lable
+          >Post Title
+          <input type="text" , name="title" value="<%= post.title %>" />
+        </lable>
+        <lable
+          >Author
+          <input type="text" name="author" value="<%= post.author %>" />
+        </lable>
+      </div>
+      <div class="form-text">
+        <lable
+          >Post text
+          <textarea name="text"><%= post.text %></textarea>
+        </lable>
+      </div>
+      <div class="form-button">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
